@@ -6,8 +6,8 @@ import seaborn as sns
 # Fungsi untuk memuat data dari path relatif
 def load_data():
     try:
-        day_df = pd.read_csv(r'D:\DBS\submission\data\day.csv')
-        hour_df = pd.read_csv(r'D:\DBS\submission\data\hour.csv')
+        day_df = pd.read_csv('data/day.csv')
+        hour_df = pd.read_csv('data/hour.csv')
         return day_df, hour_df
     except FileNotFoundError:
         st.error("File dataset tidak ditemukan. Pastikan file 'day.csv' dan 'hour.csv' ada di folder 'data'.")
